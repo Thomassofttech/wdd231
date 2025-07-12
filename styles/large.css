@@ -1,0 +1,45 @@
+/* Media query for larger screens */
+@media (min-width: 640px) {
+  /* Header layout */
+  header {
+    justify-content: space-between;
+  }
+  .about-student {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .about, .student-photo{
+    flex: 1;
+  }
+
+  header span {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #menu {
+    display: none; /* hide hamburger on large screens */
+  }
+
+  /* Navigation horizontal */
+  nav ul {
+    display: flex !important; /* always visible */
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav li a {
+    padding: 0.75rem 1.2rem;
+  }
+
+  /* Course cards: more columns */
+  #course-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  main {
+    max-width: 1200px;
+    margin: auto;
+  }
+}

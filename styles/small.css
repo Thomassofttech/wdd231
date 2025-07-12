@@ -1,0 +1,150 @@
+/* Google Font (you must include link in HTML head) */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004080; /* primary color */
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+}
+
+header span {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+#menu {
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navigation */
+nav {
+  background-color: #0066cc;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* hidden by default for small screens */
+  flex-direction: column;
+}
+
+nav ul.open {
+  display: flex;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  display: block;
+}
+
+nav li a:hover {
+  background-color: #005bb5;
+}
+
+/* Main content */
+main {
+  padding: 1rem;
+}
+
+h1, h2 {
+  color: #004080;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+/* Course cards */
+#course-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#course-cards div {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.completed {
+  background-color: #e0ffe0; /* light green background */
+  border: 1px solid #33aa33;
+}
+
+.not-completed {
+  background-color: #ffe0e0; /* light red background */
+  border: 1px solid #cc3333;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 0.75rem 1rem;
+}
+
+footer a {
+  color: #99ccff;
+  margin: 0 0.3rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0.2rem;
+}
+
+/* Buttons */
+#course-buttons {
+  margin-bottom: 1rem;
+}
+
+#course-buttons button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #004080;
+  color: white;
+  cursor: pointer;
+}
+
+#course-buttons button:hover {
+  background-color: #0066cc;
+}
+
+/* Prevent text touching edges */
+body, main, section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

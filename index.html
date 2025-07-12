@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231-Web Frontend Development 1 - Thomas Moses</title>
+    <meta name="description"
+        content="WDD 231 - Web Frontend Development 1 - Thomas Moses - Course home page for Web Frontend Development">
+    <meta name="author" content="Thomas Moses">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/company-logo.png" width="50px" alt="Site Logo">
+        <span class="site-name">Abuja Chamber of Commerce</span>
+        <button id="menu">☰</button> <!-- Hamburger icon -->
+    </header>
+
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        
+        <section class="about-student">
+            <div class="about">
+                <h2>About This Course</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem veritatis repellendus vitae.
+                Doloribus voluptate asperiores alias consequatur cumque. Doloremque unde omnis dolore inventore,
+                deserunt laboriosam expedita debitis quidem cum.</p>
+            </div>
+            <div class="student-photo">
+                 <h2>student Photo</h2>
+            <img src="images/mypic.jpg" width="250px" height="250px" alt="student photo">
+            </div>
+        </section>
+        <section>
+            <h2>Certificate Plan</h2>
+            <div id="course-buttons">
+                <button id="all">All Courses</button>
+                <button id="wdd">WDD Courses</button>
+                <button id="cse">CSE Courses</button>
+            </div>
+            <div id="course-cards">
+                <!-- dynamically created course cards go here -->
+            </div>
+            <p>Total Credits: <span id="total-credits">0</span></p>
+        </section>
+        <section>
+            <h2>Contact & Projects</h2>
+            <!-- links or content about chamber, final, etc. -->
+        </section>
+    </main>
+    <footer>
+        <div>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="https//facebook.com/" target="_blank">Facebook</a>
+            <a href="https//twitter.com/" target="_blank">Twitter</a>
+
+        </div>
+        <p>&copy; <span id="currentyear"></span> Thomas Moses | Abuja-Nigeria🟩</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/date.js"></script>
+</body>
+
+</html>
