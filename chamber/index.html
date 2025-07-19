@@ -28,22 +28,41 @@
       <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html" class="active">Directory</a></li>
-         <li><a href="discover.html">Discover</a></li>
-        <li><a href="join.html">Join</a> </li>
+        <li><a href="">Discover</a></li>
+        <li><a href="#">Join</a> </li>
       </ul>
     </nav>
   </header>
   <main>
-    <h2>Business Directory</h2>
-    <div class="view-buttons">
-      <button id="grid">Grid view</button>
-      <button id="list">List View</button>
-    </div>
-    <div id="directory" class="grid">
-      <!--Business member cards will be injeced here by js-->
-    </div>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Welcome to Abuja Chamber of Commerce</h1>
+        <p>Empowering businesses and the community.</p>
+        <a class="cta" href="#">Join the Chamber</a>
+      </div>
+    </section>
+
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>📅 Business Expo – July 25, 2025</li>
+        <li>📅 Member Networking Night – August 3, 2025</li>
+      </ul>
+    </section>
+
+    <section class="weather">
+      <h2>Current Weather in Abuja</h2>
+      <p>🌡️ <span id="temperature"></span></p>
+      <p>☁️ <span id="description"></span></p>
+      <div id="forecast"></div>
+    </section>
+
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container" class="spotlight-grid"></div>
+    </section>
   </main>
-  <footer>
+<footer>
     <p>Contact us at info@abujachamber.com | (+234) 7082398763</p>
     <p>&copy; 2025 <span id="currentyear"></span>Abuja Chamber of Commerce 🆖|Thomas Moses | WDD231</p>
     <p><span id="lastModified"></span></p>
