@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Call for service",
+    "address": "Apo-Abuja Nigeria",
+    "phone": "+234 7082398763",
+    "website": "https://thomassofttech.github.io/wdd131/personal-project",
+    "image": "chamber/images/service.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Funtay Fashion",
+    "address": "Apo legislative quaters-Abuja",
+    "phone": "+234 9033581520",
+    "website": "https://techspark.io",
+    "image": "chamber/images/fashion.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Mama Cass Rastaurant",
+    "address": "Ikeja-Lagos",
+    "phone": "+234 7082327342",
+    "website": "https://mamacassng.com/",
+    "image": "chamber/images/restaurant.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Rafters Tour",
+    "address": "USA",
+    "phone": "555-8755",
+    "website": "https://thomassofttech.github.io/wdd130/wwr",
+    "image": "chamber/images/raft.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Thomas Soft Tech",
+    "address": "202 Workout Blvd",
+    "phone": "555-2345",
+    "website": "https://thomassofttech.github.io/wdd131/personal-project",
+    "image": "chamber/images/tech.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Big 2 Real Estate Firm",
+    "address": "Area 11, Abuja",
+    "phone": "+234 9061167172",
+    "website": "https://nigeriaproperties.com",
+    "image": "chamber/images/estate.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Big 2 Printing Services",
+    "address": "Abuja Nigeria",
+    "phone": "+234 9061167172",
+    "website": "https://thomassofttech.github.io/wdd131/personal-project",
+    "image": "chamber/images/estate.jpg",
+    "membership": 2
+  }
+]

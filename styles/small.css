@@ -80,7 +80,7 @@ section {
 /* Course cards */
 #course-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr, 2fr;
   gap: 1rem;
 }
 
@@ -126,9 +126,10 @@ footer p {
 
 /* Buttons */
 #course-buttons {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-
 #course-buttons button {
   margin-right: 0.5rem;
   padding: 0.4rem 0.8rem;
@@ -147,4 +148,10 @@ footer p {
 body, main, section {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.cert{
+  background-color:blue;
+  color: white;
+  text-align: center;
 }

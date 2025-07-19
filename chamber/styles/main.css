@@ -1,0 +1,97 @@
+/* Basic styling - extend as needed */
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#menu {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul.open {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #004080;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 1rem;
+  }
+
+  #menu {
+    display: block;
+  }
+}
+
+/* Grid/List toggle container */
+.view-buttons {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.member img {
+  width: 100%;         /* Make the image scale to the container width */
+  height: auto;        /* Maintain aspect ratio */
+  max-width: 300px;    /* Optional: set a max size if needed */
+  object-fit: cover;   /* Crop overflow if needed */
+  border-radius: 10px; /* Optional: rounded corners for better look */
+  display: block;
+  margin: 0 auto;      /* Center the image */
+}
+
+
+.member {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+

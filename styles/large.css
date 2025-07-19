@@ -6,7 +6,7 @@
   }
   .about-student {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     align-items: flex-start;
   }
   .about, .student-photo{
@@ -21,11 +21,9 @@
   #menu {
     display: none; /* hide hamburger on large screens */
   }
-
-  /* Navigation horizontal */
   nav ul {
     display: flex !important; /* always visible */
-    flex-direction: row;
+    flex-direction:column;
     justify-content: center;
   }
 
@@ -42,4 +40,29 @@
     max-width: 1200px;
     margin: auto;
   }
+}
+.about h2{
+  background-color:blue;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.student-photo h2{
+  background-color:blue;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#head{
+  justify-content:  left;
+  background-color:blue;
+}
+
+header h1{
+  text-align: left;
+  color: white;
+  margin: 0px;
+  padding-left: 50px;
 }

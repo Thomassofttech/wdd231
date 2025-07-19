@@ -2,49 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Discover local business in the heart of  Abuja - the Capital of Nigeria">
-        <meta name="author" content="Thomas Moses">
-        <title>Abuja Chamber Directory</title>
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="Abuja Chamber of Commerce - Thomas Moses - WDD231">
-    <meta property="og:description"
-        content="Discover local business in the heart of  Abuja - the Capital of Nigeria">
-        <meta property="og:image" content="images/">
-    <meta property="og:url" content="https//thomassofttech.github.io/wdd231/chamber/directory.html">
-
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="chamber/data/styles/chamber.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover local business in the heart of  Abuja - the Capital of Nigeria">
+  <meta name="author" content="Thomas Moses">
+  <title>Abuja Chamber Directory</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Abuja Chamber of Commerce - Thomas Moses - WDD231">
+  <meta property="og:description" content="Discover local business in the heart of  Abuja - the Capital of Nigeria">
+  <meta property="og:image" content="images/">
+  <meta property="og:url" content="https//thomassofttech.github.io/wdd231/chamber/directory.html">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="chamber/styles/main.css">
+  <script src="chamber/scripts/directory.js" defer></script>
+ <script src="chamber/scripts/getdates.js" defer></script>
 </head>
 <body>
   <header>
     <div class="logo-title">
-      <img src="images/company-logo.png" width="50px" alt="company logo">
+      <img src="chamber/images/company-logo.png" width="50px" alt="company logo">
       <h1>Abuja Chamber of Commerce</h1>
     </div>
+    <button id="menu" aria-label="Toggle Menu">&#9776;</button>
     <nav>
-<ul>
-  <li><a href="directory.html" class="active">Directory</a></li>
-  <li><a href="about.html"></a> </li>
-  <li><a href="contact.html"></a></li>
-</ul>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+         <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a> </li>
+      </ul>
     </nav>
-  </header>  
+  </header>
   <main>
-<h2>Business Directory</h2>
-<div class="view-buttons">
-  <button id="grid">Grid view</button>
-  <button id="list">List View</button>
-</div>
-<div  id="directory" class="grid">
-  <!--Business member cards will be injeced here by js-->
-</div>
+    <h2>Business Directory</h2>
+    <div class="view-buttons">
+      <button id="grid">Grid view</button>
+      <button id="list">List View</button>
+    </div>
+    <div id="directory" class="grid">
+      <!--Business member cards will be injeced here by js-->
+    </div>
   </main>
   <footer>
-<p>Contact us at info@abujachamber.com | (+234) 7082398763</p>
-<p>&copy; <span id="lastModified"></span></p>
+    <p>Contact us at info@abujachamber.com | (+234) 7082398763</p>
+    <p>&copy; 2025 <span id="year"></span>Abuja Chamber of Commerce 🆖|Thomas Moses | WDD231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>
