@@ -95,3 +95,23 @@ nav ul.open {
 }
 
 
+/* Home Page Styling */
+
+.spotlights img {
+  width: 100%;         /* Make the image scale to the container width */
+  height: auto;        /* Maintain aspect ratio */
+  max-width: 300px;    /* Optional: set a max size if needed */
+  object-fit: cover;   /* Crop overflow if needed */
+  border-radius: 10px; /* Optional: rounded corners for better look */
+  display: block;
+  margin: 0 auto;      /* Center the image */
+}
+
+.hero-img{
+  position: absolute;
+  width: 98%;
+  z-index: -1;
+  height: 150px;
+  margin-top: 0%;
+
+}

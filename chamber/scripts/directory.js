@@ -1,7 +1,7 @@
 const directory = document.querySelector("#directory");
 
 async function getBusinesses() {
-  const response = await fetch("chamber/data/business.json");
+  const response = await fetch("data/business.json");
   const data = await response.json();
   displayBusinesses(data);
 }

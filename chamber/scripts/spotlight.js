@@ -1,5 +1,5 @@
 async function loadSpotlights() {
-  const response = await fetch("chamber/data/business.json");
+  const response = await fetch("data/business.json");
   const data = await response.json();
 
   const goldSilver = data.filter(m => m.membership === 2 || m.membership === 3);

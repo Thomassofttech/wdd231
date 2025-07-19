@@ -4,7 +4,7 @@
     "address": "Apo-Abuja Nigeria",
     "phone": "+234 7082398763",
     "website": "https://thomassofttech.github.io/wdd131/personal-project",
-    "image": "chamber/images/service.jpg",
+    "image": "images/service.jpg",
     "membership": 3
   },
   {
@@ -12,7 +12,7 @@
     "address": "Apo legislative quaters-Abuja",
     "phone": "+234 9033581520",
     "website": "https://techspark.io",
-    "image": "chamber/images/fashion.jpg",
+    "image": "images/fashion.jpg",
     "membership": 2
   },
   {
@@ -20,7 +20,7 @@
     "address": "Ikeja-Lagos",
     "phone": "+234 7082327342",
     "website": "https://mamacassng.com/",
-    "image": "chamber/images/restaurant.jpg",
+    "image": "images/restaurant.jpg",
     "membership": 1
   },
   {
@@ -28,7 +28,7 @@
     "address": "USA",
     "phone": "555-8755",
     "website": "https://thomassofttech.github.io/wdd130/wwr",
-    "image": "chamber/images/raft.jpg",
+    "image": "images/raft.jpg",
     "membership": 2
   },
   {
@@ -36,7 +36,7 @@
     "address": "202 Workout Blvd",
     "phone": "555-2345",
     "website": "https://thomassofttech.github.io/wdd131/personal-project",
-    "image": "chamber/images/tech.jpg",
+    "image": "images/tech.jpg",
     "membership": 1
   },
   {
@@ -52,7 +52,7 @@
     "address": "Abuja Nigeria",
     "phone": "+234 9061167172",
     "website": "https://thomassofttech.github.io/wdd131/personal-project",
-    "image": "chamber/images/print.jpg",
+    "image": "images/print.jpg",
     "membership": 2
   }
 ]
