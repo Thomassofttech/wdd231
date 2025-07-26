@@ -1,10 +1,12 @@
-/* Basic styling - extend as needed */
+/*styling */
 
 header {
   background-color: #003366;
   color: white;
   padding: 1rem;
-  position: relative;
+  position:relative;
+  align-items: center ;
+  justify-content:space-between ;
 }
 
 .logo-title {
@@ -13,15 +15,20 @@ header {
   gap: 1rem;
 }
 
-#menu {
+ #menu {
   font-size: 1.5rem;
   background: none;
   border: none;
   color: white;
-  display: none;
+  display: flex;
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+
+nav a.active{
+  font-weight:bold;
+  border-bottom: 2px solid #ffc107;
 }
 
 nav ul {
@@ -39,19 +46,36 @@ nav ul.open {
   display: block;
 }
 
+nav.open {
+  display: flex;
+}
+
 @media screen and (max-width: 768px) {
-  nav ul {
-    display: none;
+   nav {
+    display:none;
     flex-direction: column;
     background: #004080;
     position: absolute;
     top: 100%;
     right: 0;
     padding: 1rem;
-  }
+    border-radius: 8px;
+  } 
 
   #menu {
-    display: block;
+    display:block;
+  }
+  nav ul.closed{
+    display: none;
+  }
+  nav ul.open{
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #menu {
+    display: none;
   }
 }
 
@@ -78,7 +102,6 @@ nav ul.open {
 .member img {
   width: 100%;         /* Make the image scale to the container width */
   height: auto;        /* Maintain aspect ratio */
-  max-width: 300px;    /* Optional: set a max size if needed */
   object-fit: cover;   /* Crop overflow if needed */
   border-radius: 10px; /* Optional: rounded corners for better look */
   display: block;
@@ -94,24 +117,67 @@ nav ul.open {
   text-align: center;
 }
 
+.h2{
+text-align: center;
+}
+
 
 /* Home Page Styling */
 
 .spotlights img {
   width: 100%;         /* Make the image scale to the container width */
   height: auto;        /* Maintain aspect ratio */
-  max-width: 300px;    /* Optional: set a max size if needed */
   object-fit: cover;   /* Crop overflow if needed */
   border-radius: 10px; /* Optional: rounded corners for better look */
   display: block;
   margin: 0 auto;      /* Center the image */
 }
-
+.spotlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
 .hero-img{
   position: absolute;
-  width: 98%;
+  width: 100%;
   z-index: -1;
-  height: 150px;
+  height: 100%;
   margin-top: 0%;
+  object-fit: cover;
+  left: 0;
+
+}
+
+.h1{
+  padding-top: 2rem;
+}
+
+.hero{
+  position:relative;
+    height: 63vh;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+
+.cta{
+  background-color: #003366;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  border-radius: 21px;
+  padding: 10px;
+  text-align: center;
+}
+footer{
+  text-align: center;
+  background-color:gray;
+}
+
+.spotlight-grid{ 
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 
 }

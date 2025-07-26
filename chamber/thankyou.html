@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+  <link rel="stylesheet" href="styles/join.css" />
+  <script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const fields = ['fname', 'lname', 'email', 'phone', 'business', 'timestamp'];
+      fields.forEach(field => {
+        const el = document.getElementById(field);
+        if (el) el.textContent = params.get(field) || '';
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Thank You for Joining!</h1>
+  </header>
+
+  <main style="padding: 2rem;">
+    <h2>Submission Details</h2>
+    <ul>
+      <li><strong>First Name:</strong> <span id="fname"></span></li>
+      <li><strong>Last Name:</strong> <span id="lname"></span></li>
+      <li><strong>Email:</strong> <span id="email"></span></li>
+      <li><strong>Mobile:</strong> <span id="phone"></span></li>
+      <li><strong>Business Name:</strong> <span id="business"></span></li>
+      <li><strong>Submitted On:</strong> <span id="timestamp"></span></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; Abuja Chamber of Commerce</p>
+  </footer>
+</body>
+</html>

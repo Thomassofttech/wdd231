@@ -11,6 +11,10 @@ async function loadSpotlights() {
   }
 
   const spotlightContainer = document.getElementById("spotlight-container");
+  if (!spotlightContainer) {
+    console.warn("No spotlight container found on this page.");
+    return;
+  }
   selected.forEach(member => {
     const card = document.createElement("div");
     card.classList.add("spotlight-card");

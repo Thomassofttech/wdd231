@@ -14,23 +14,27 @@
   <meta property="og:url" content="https//thomassofttech.github.io/wdd231/chamber/directory.html">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
-  <!-- <script src="chamber/scripts/directory.js" defer></script> -->
+  <script src="scripts/directory.js" defer></script> 
  <script src="scripts/getdates.js" defer></script>
  <script src="scripts/spotlight.js" defer></script>
 </head>
 <body>
   <header>
     <div class="logo-title">
-      <img src="images/company-logo.png" width="50px" alt="company logo">
+      <a href="directory.html">
+<img src="images/company-logo.png" width="50px" alt="company logo">
+</a>
       <h1>Abuja Chamber of Commerce</h1>
+      
     </div>
-    <button id="menu" aria-label="Toggle Menu">&#9776;</button>
-    <nav>
+    <button id="menu" aria-label="Toggle Menu">&#9776;
+    </button>
+    <nav id="navmenu" class="closed" class="open">
       <ul id="nav-links">
-        <li><a href="">Home</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
         <li><a href="">Discover</a></li>
-        <li><a href="#">Join</a> </li>
+        <li><a href="join.html">Join</a> </li>
       </ul>
     </nav>
   </header>
@@ -38,13 +42,14 @@
     <section class="hero">
       <div class="hero-text">
         <img src="images/estate.jpg" class="hero-img" alt="hero image">
-        <h1>Welcome to Abuja Chamber of Commerce</h1>
-        <p>Empowering businesses and the community.</p>
-        <a class="cta" href="#">Join the Chamber</a>
+        <h1 class="h1">Welcome to Abuja Chamber of Commerce</h1>
+        
+        <p class="p">Empowering businesses and the community</p>
+        <a class="cta" href="join.html">Join the Chamber</a>
       </div>
     </section>
 
-    <section class="events">
+    <section class="events"><br><br>
       <h2>Upcoming Events</h2>
       <ul>
         <li>📅 Business Expo – July 25, 2025</li>

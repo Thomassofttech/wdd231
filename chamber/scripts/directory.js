@@ -7,6 +7,11 @@ async function getBusinesses() {
 }
 
 function displayBusinesses(businesses) {
+  if (!directory) {
+    console.warn("Directory element not found.");
+    return;
+  }
+  
   businesses.forEach((biz) => {
     const card = document.createElement("section");
     card.classList.add("member");
@@ -27,15 +32,39 @@ function displayBusinesses(businesses) {
 const gridBtn = document.querySelector("#grid");
 const listBtn = document.querySelector("#list");
 
-gridBtn.addEventListener("click", () => {
-  directory.classList.add("grid");
-  directory.classList.remove("list");
-});
-
-listBtn.addEventListener("click", () => {
-  directory.classList.add("list");
-  directory.classList.remove("grid");
-});
+if (gridBtn && listBtn && directory) {
+  gridBtn.addEventListener("click", () => {
+    directory.classList.add("grid");
+    directory.classList.remove("list");
+  });
+  
+  listBtn.addEventListener("click", () => {
+    directory.classList.add("list");
+    directory.classList.remove("grid");
+  });
+}
 
 // Load data
 getBusinesses();
+
+const menuButton = document.getElementById("menu");
+const navLinks = document.getElementById("navmenu");
+
+menuButton.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+
+// Set timestamp on load
+window.addEventListener("DOMContentLoaded", () => {
+  const timestamp = new Date().toISOString();
+  document.getElementById("timestamp").value = timestamp;
+});
+
+// Modal control
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}

@@ -44,7 +44,7 @@
     "address": "Area 11, Abuja",
     "phone": "+234 9061167172",
     "website": "https://nigeriaproperties.com",
-    "image": "chamber/images/estate.jpg",
+    "image": "images/estate.jpg",
     "membership": 3
   },
   {
@@ -53,6 +53,14 @@
     "phone": "+234 9061167172",
     "website": "https://thomassofttech.github.io/wdd131/personal-project",
     "image": "images/print.jpg",
+    "membership": 2
+  },
+  {
+    "name": "big 2 Multi  Services",
+    "address": "Abuja Nigeria",
+    "phone": "+234 9061167172",
+    "website": "https://thomassofttech.github.io/wdd131/personal-project",
+    "image": "images/big.jpg",
     "membership": 2
   }
 ]
