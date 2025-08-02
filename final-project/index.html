@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover delicious recipes from around the world with our comprehensive recipe finder">
+    <meta name="author" content="Student Name">
+    <meta property="og:title" content="Recipe Discovery - Find Your Next Favorite Dish">
+    <meta property="og:description" content="Explore thousands of recipes with detailed ingredients and instructions">
+    <meta property="og:type" content="website">
+    <title>Recipe Discovery - Home</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDJMMjAgMTBIMjhMMjIgMTZMMjQgMjRMMTYgMjBMOCAyNEwxMCAxNkw0IDEwSDEyTDE2IDJaIiBmaWxsPSIjRkY2NTAwIi8+Cjwvc3ZnPgo=">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff6500;
+            text-decoration: none;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            background: #ff6500;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 3px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            transition: 0.3s;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff6500, #ff8500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* Search Section */
+        .search-section {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-container {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            min-width: 250px;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #ff6500;
+        }
+
+        .search-btn, .favorites-btn {
+            padding: 1rem 2rem;
+            background: #ff6500;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover, .favorites-btn:hover {
+            background: #e55a00;
+            transform: translateY(-2px);
+        }
+
+        .favorites-btn {
+            background: #28a745;
+        }
+
+        .favorites-btn:hover {
+            background: #218838;
+        }
+
+        /* Filter Section */
+        .filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .filter-select {
+            padding: 0.5rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+        }
+
+        /* Recipe Grid */
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .recipe-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.2rem;
+        }
+
+        .recipe-content {
+            padding: 1.5rem;
+        }
+
+        .recipe-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .recipe-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .recipe-ingredients {
+            margin-bottom: 1rem;
+        }
+
+        .recipe-ingredients h4 {
+            margin-bottom: 0.5rem;
+            color: #ff6500;
+        }
+
+        .ingredients-list {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .recipe-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-favorite, .btn-view {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-favorite {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-favorite:hover {
+            background: #218838;
+        }
+
+        .btn-favorite.favorited {
+            background: #dc3545;
+        }
+
+        .btn-view {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-view:hover {
+            background: #0056b3;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #999;
+        }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        /* Loading and Error States */
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .error {
+            text-align: center;
+            padding: 3rem;
+            color: #dc3545;
+            background: rgba(220, 53, 69, 0.1);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #ff6500;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-container {
+                flex-direction: column;
+            }
+
+            .search-input {
+                min-width: auto;
+            }
+
+            .recipe-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .search-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">🍳 RecipeHub</a>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Discover Amazing Recipes</h1>
+            <p>Explore thousands of delicious recipes from around the world</p>
+        </section>
+
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search for recipes...">
+                <button class="search-btn" id="search-btn">Search</button>
+                <button class="favorites-btn" id="view-favorites">View Favorites</button>
+            </div>
+            <div class="filters">
+                <select class="filter-select" id="cuisine-filter">
+                    <option value="">All Cuisines</option>
+                    <option value="italian">Italian</option>
+                    <option value="mexican">Mexican</option>
+                    <option value="asian">Asian</option>
+                    <option value="american">American</option>
+                </select>
+                <select class="filter-select" id="diet-filter">
+                    <option value="">All Diets</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="gluten-free">Gluten Free</option>
+                    <option value="keto">Keto</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="recipe-results">
+            <div class="recipe-grid" id="recipe-grid">
+                <!-- Recipes will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Recipe Details -->
+    <div class="modal" id="recipe-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-body">
+                <!-- Recipe details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 RecipeHub. All rights reserved.</p>
+        <p><a href="#attributions">Attributions</a> | Built for WDD 231 Final Project</p>
+    </footer>
+
+    <script type="module">
+        // Recipe data (simulating API response)
+        const recipeData = [
+            {
+                id: 1,
+                title: "Classic Spaghetti Carbonara",
+                cuisine: "italian",
+                diet: "vegetarian",
+                cookTime: 20,
+                servings: 4,
+                difficulty: "Easy",
+                image: "🍝",
+                ingredients: ["400g spaghetti", "200g pancetta", "4 eggs", "100g parmesan", "Black pepper", "Salt"],
+                instructions: "1. Cook spaghetti in salted water. 2. Fry pancetta until crispy. 3. Mix eggs with parmesan. 4. Combine hot pasta with pancetta, then egg mixture. 5. Serve immediately with black pepper.",
+                rating: 4.8,
+                calories: 520
+            },
+            {
+                id: 2,
+                title: "Chicken Tacos Al Pastor",
+                cuisine: "mexican",
+                diet: "",
+                cookTime: 35,
+                servings: 6,
+                difficulty: "Medium",
+                image: "🌮",
+                ingredients: ["500g chicken thighs", "Corn tortillas", "Pineapple", "Onion", "Cilantro", "Lime", "Chili powder"],
+                instructions: "1. Marinate chicken with spices. 2. Grill chicken and pineapple. 3. Dice onion and chop cilantro. 4. Warm tortillas. 5. Assemble tacos with all ingredients.",
+                rating: 4.6,
+                calories: 380
+            },
+            {
+                id: 3,
+                title: "Vegetable Pad Thai",
+                cuisine: "asian",
+                diet: "vegetarian",
+                cookTime: 25,
+                servings: 4,
+                difficulty: "Medium",
+                image: "🍜",
+                ingredients: ["Rice noodles", "Tofu", "Bean sprouts", "Carrots", "Peanuts", "Lime", "Fish sauce", "Tamarind"],
+                instructions: "1. Soak rice noodles. 2. Stir-fry vegetables and tofu. 3. Add noodles and sauce. 4. Toss everything together. 5. Garnish with peanuts and lime.",
+                rating: 4.4,
+                calories: 420
+            },
+            {
+                id: 4,
+                title: "Classic Cheeseburger",
+                cuisine: "american",
+                diet: "",
+                cookTime: 15,
+                servings: 4,
+                difficulty: "Easy",
+                image: "🍔",
+                ingredients: ["Ground beef", "Burger buns", "Cheese slices", "Lettuce", "Tomato", "Onion", "Pickles"],
+                instructions: "1. Form beef patties. 2. Grill or pan-fry patties. 3. Toast buns. 4. Add cheese to hot patties. 5. Assemble burgers with desired toppings.",
+                rating: 4.7,
+                calories: 650
+            },
+            {
+                id: 5,
+                title: "Quinoa Buddha Bowl",
+                cuisine: "american",
+                diet: "vegan",
+                cookTime: 30,
+                servings: 2,
+                difficulty: "Easy",
+                image: "🥗",
+                ingredients: ["Quinoa", "Chickpeas", "Avocado", "Sweet potato", "Spinach", "Tahini", "Lemon juice"],
+                instructions: "1. Cook quinoa. 2. Roast sweet potato and chickpeas. 3. Make tahini dressing. 4. Arrange ingredients in bowls. 5. Drizzle with dressing.",
+                rating: 4.5,
+                calories: 480
+            },
+            {
+                id: 6,
+                title: "Margherita Pizza",
+                cuisine: "italian",
+                diet: "vegetarian",
+                cookTime: 45,
+                servings: 4,
+                difficulty: "Medium",
+                image: "🍕",
+                ingredients: ["Pizza dough", "Tomato sauce", "Mozzarella", "Fresh basil", "Olive oil", "Salt"],
+                instructions: "1. Prepare pizza dough. 2. Spread tomato sauce. 3. Add mozzarella cheese. 4. Bake in hot oven. 5. Top with fresh basil and olive oil.",
+                rating: 4.9,
+                calories: 580
+            },
+            {
+                id: 7,
+                title: "Beef Stir Fry",
+                cuisine: "asian",
+                diet: "",
+                cookTime: 20,
+                servings: 4,
+                difficulty: "Easy",
+                image: "🥩",
+                ingredients: ["Beef strips", "Broccoli", "Bell peppers", "Soy sauce", "Garlic", "Ginger", "Rice"],
+                instructions: "1. Marinate beef in soy sauce. 2. Heat wok or large pan. 3. Stir-fry beef until browned. 4. Add vegetables and cook until tender. 5. Serve over rice.",
+                rating: 4.3,
+                calories: 450
+            },
+            {
+                id: 8,
+                title: "Greek Salad",
+                cuisine: "mediterranean",
+                diet: "vegetarian",
+                cookTime: 15,
+                servings: 4,
+                difficulty: "Easy",
+                image: "🥙",
+                ingredients: ["Cucumber", "Tomatoes", "Red onion", "Feta cheese", "Olives", "Olive oil", "Oregano"],
+                instructions: "1. Chop vegetables into chunks. 2. Combine in large bowl. 3. Add olives and feta. 4. Drizzle with olive oil. 5. Season with oregano and salt.",
+                rating: 4.2,
+                calories: 320
+            },
+            {
+                id: 9,
+                title: "Chicken Curry",
+                cuisine: "indian",
+                diet: "",
+                cookTime: 40,
+                servings: 6,
+                difficulty: "Medium",
+                image: "🍛",
+                ingredients: ["Chicken pieces", "Coconut milk", "Curry powder", "Onion", "Garlic", "Ginger", "Basmati rice"],
+                instructions: "1. Sauté onion, garlic, and ginger. 2. Add curry powder and cook until fragrant. 3. Add chicken and brown. 4. Pour in coconut milk and simmer. 5. Serve with rice.",
+                rating: 4.6,
+                calories: 520
+            },
+            {
+                id: 10,
+                title: "Chocolate Chip Cookies",
+                cuisine: "american",
+                diet: "vegetarian",
+                cookTime: 25,
+                servings: 24,
+                difficulty: "Easy",
+                image: "🍪",
+                ingredients: ["Flour", "Butter", "Brown sugar", "Eggs", "Vanilla", "Chocolate chips", "Baking soda"],
+                instructions: "1. Cream butter and sugars. 2. Add eggs and vanilla. 3. Mix in dry ingredients. 4. Fold in chocolate chips. 5. Bake until golden brown.",
+                rating: 4.8,
+                calories: 180
+            },
+            {
+                id: 11,
+                title: "Avocado Toast",
+                cuisine: "american",
+                diet: "vegan",
+                cookTime: 10,
+                servings: 2,
+                difficulty: "Easy",
+                image: "🥑",
+                ingredients: ["Bread slices", "Ripe avocado", "Lemon juice", "Salt", "Pepper", "Red pepper flakes"],
+                instructions: "1. Toast bread slices. 2. Mash avocado with lemon juice. 3. Season with salt and pepper. 4. Spread on toast. 5. Sprinkle with red pepper flakes.",
+                rating: 4.1,
+                calories: 280
+            },
+            {
+                id: 12,
+                title: "Salmon Teriyaki",
+                cuisine: "asian",
+                diet: "gluten-free",
+                cookTime: 20,
+                servings: 4,
+                difficulty: "Easy",
+                image: "🐟",
+                ingredients: ["Salmon fillets", "Soy sauce", "Mirin", "Sugar", "Garlic", "Ginger", "Sesame seeds"],
+                instructions: "1. Make teriyaki sauce with soy sauce, mirin, and sugar. 2. Marinate salmon. 3. Pan-fry salmon skin-side down. 4. Glaze with sauce. 5. Garnish with sesame seeds.",
+                rating: 4.7,
+                calories: 380
+            },
+            {
+                id: 13,
+                title: "Mushroom Risotto",
+                cuisine: "italian",
+                diet: "vegetarian",
+                cookTime: 35,
+                servings: 4,
+                difficulty: "Hard",
+                image: "🍄",
+                ingredients: ["Arborio rice", "Mixed mushrooms", "Vegetable broth", "White wine", "Parmesan", "Onion", "Butter"],
+                instructions: "1. Sauté mushrooms and set aside. 2. Cook onion until soft. 3. Add rice and toast briefly. 4. Add wine and stir until absorbed. 5. Gradually add warm broth, stirring constantly.",
+                rating: 4.5,
+                calories: 420
+            },
+            {
+                id: 14,
+                title: "Fish Tacos",
+                cuisine: "mexican",
+                diet: "",
+                cookTime: 25,
+                servings: 4,
+                difficulty: "Medium",
+                image: "🐠",
+                ingredients: ["White fish fillets", "Corn tortillas", "Cabbage slaw", "Lime", "Cilantro", "Chipotle mayo", "Cumin"],
+                instructions: "1. Season fish with cumin and spices. 2. Grill or pan-fry fish. 3. Make chipotle mayo. 4. Prepare cabbage slaw. 5. Assemble tacos with all components.",
+                rating: 4.4,
+                calories: 350
+            },
+            {
+                id: 15,
+                title: "Vegetable Lasagna",
+                cuisine: "italian",
+                diet: "vegetarian",
+                cookTime: 60,
+                servings: 8,
+                difficulty: "Hard",
+                image: "🧄",
+                ingredients: ["Lasagna noodles", "Ricotta cheese", "Spinach", "Zucchini", "Marinara sauce", "Mozzarella", "Parmesan"],
+                instructions: "1. Cook lasagna noodles. 2. Sauté vegetables. 3. Mix ricotta with eggs and seasonings. 4. Layer noodles, cheese, vegetables, and sauce. 5. Bake until bubbly and golden.",
+                rating: 4.6,
+                calories: 480
+            },
+            {
+                id: 16,
+                title: "Pancakes",
+                cuisine: "american",
+                diet: "vegetarian",
+                cookTime: 20,
+                servings: 4,
+                difficulty: "Easy",
+                image: "🥞",
+                ingredients: ["Flour", "Eggs", "Milk", "Sugar", "Baking powder", "Salt", "Butter", "Maple syrup"],
+                instructions: "1. Mix dry ingredients. 2. Whisk together wet ingredients. 3. Combine wet and dry ingredients. 4. Cook on griddle until bubbles form. 5. Flip and cook until golden.",
+                rating: 4.3,
+                calories: 320
+            }
+        ];
+
+        // Local Storage Management
+        class StorageManager {
+            static getFavorites() {
+                const favorites = JSON.parse(localStorage.getItem('favoriteRecipes') || '[]');
+                return favorites;
+            }
+
+            static addFavorite(recipeId) {
+                const favorites = this.getFavorites();
+                if (!favorites.includes(recipeId)) {
+                    favorites.push(recipeId);
+                    localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
+                }
+            }
+
+            static removeFavorite(recipeId) {
+                const favorites = this.getFavorites();
+                const updatedFavorites = favorites.filter(id => id !== recipeId);
+                localStorage.setItem('favoriteRecipes', JSON.stringify(updatedFavorites));
+            }
+
+            static getSearchHistory() {
+                return JSON.parse(localStorage.getItem('searchHistory') || '[]');
+            }
+
+            static addSearchTerm(term) {
+                if (!term.trim()) return;
+                const history = this.getSearchHistory();
+                const updatedHistory = [term, ...history.filter(t => t !== term)].slice(0, 10);
+                localStorage.setItem('searchHistory', JSON.stringify(updatedHistory));
+            }
+        }
+
+        // Recipe Manager Class
+        class RecipeManager {
+            constructor() {
+                this.recipes = recipeData;
+                this.filteredRecipes = this.recipes;
+                this.currentSearch = '';
+                this.currentFilters = {
+                    cuisine: '',
+                    diet: ''
+                };
+                this.init();
+            }
+
+            init() {
+                this.bindEvents();
+                this.displayRecipes(this.recipes);
+            }
+
+            bindEvents() {
+                // Search functionality
+                document.getElementById('search-btn').addEventListener('click', () => this.handleSearch());
+                document.getElementById('search-input').addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') this.handleSearch();
+                });
+
+                // Filter functionality
+                document.getElementById('cuisine-filter').addEventListener('change', (e) => {
+                    this.currentFilters.cuisine = e.target.value;
+                    this.applyFilters();
+                });
+
+                document.getElementById('diet-filter').addEventListener('change', (e) => {
+                    this.currentFilters.diet = e.target.value;
+                    this.applyFilters();
+                });
+
+                // View favorites
+                document.getElementById('view-favorites').addEventListener('click', () => this.showFavorites());
+
+                // Modal controls
+                document.getElementById('modal-close').addEventListener('click', () => this.closeModal());
+                document.getElementById('recipe-modal').addEventListener('click', (e) => {
+                    if (e.target.id === 'recipe-modal') this.closeModal();
+                });
+
+                // Hamburger menu
+                document.getElementById('hamburger').addEventListener('click', () => {
+                    document.getElementById('nav-menu').classList.toggle('active');
+                });
+            }
+
+            async handleSearch() {
+                const searchTerm = document.getElementById('search-input').value.trim();
+                
+                try {
+                    this.showLoading();
+                    
+                    // Simulate API delay
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                    
+                    if (searchTerm) {
+                        StorageManager.addSearchTerm(searchTerm);
+                        this.currentSearch = searchTerm.toLowerCase();
+                    } else {
+                        this.currentSearch = '';
+                    }
+                    
+                    this.applyFilters();
+                } catch (error) {
+                    this.showError('Failed to search recipes. Please try again.');
+                }
+            }
+
+            applyFilters() {
+                let filtered = this.recipes;
+
+                // Apply search filter
+                if (this.currentSearch) {
+                    filtered = filtered.filter(recipe => 
+                        recipe.title.toLowerCase().includes(this.currentSearch) ||
+                        recipe.ingredients.some(ingredient => 
+                            ingredient.toLowerCase().includes(this.currentSearch)
+                        )
+                    );
+                }
+
+                // Apply cuisine filter
+                if (this.currentFilters.cuisine) {
+                    filtered = filtered.filter(recipe => 
+                        recipe.cuisine === this.currentFilters.cuisine
+                    );
+                }
+
+                // Apply diet filter
+                if (this.currentFilters.diet) {
+                    filtered = filtered.filter(recipe => 
+                        recipe.diet === this.currentFilters.diet
+                    );
+                }
+
+                this.filteredRecipes = filtered;
+                this.displayRecipes(filtered);
+            }
+
+            showFavorites() {
+                const favoriteIds = StorageManager.getFavorites();
+                const favoriteRecipes = this.recipes.filter(recipe => 
+                    favoriteIds.includes(recipe.id)
+                );
+                
+                if (favoriteRecipes.length === 0) {
+                    this.showError('No favorite recipes found. Add some recipes to your favorites!');
+                    return;
+                }
+                
+                this.displayRecipes(favoriteRecipes);
+            }
+
+            displayRecipes(recipes) {
+                const grid = document.getElementById('recipe-grid');
+                
+                if (recipes.length === 0) {
+                    grid.innerHTML = `
+                        <div class="error">
+                            <h3>No recipes found</h3>
+                            <p>Try adjusting your search terms or filters.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const favoriteIds = StorageManager.getFavorites();
+                
+                grid.innerHTML = recipes.map(recipe => `
+                    <div class="recipe-card" data-id="${recipe.id}">
+                        <div class="recipe-image">${recipe.image}</div>
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">${recipe.title}</h3>
+                            <div class="recipe-meta">
+                                <span>⏱️ ${recipe.cookTime} min</span>
+                                <span>👥 ${recipe.servings} servings</span>
+                                <span>⭐ ${recipe.rating}</span>
+                                <span>🔥 ${recipe.calories} cal</span>
+                            </div>
+                            <div class="recipe-ingredients">
+                                <h4>Key Ingredients:</h4>
+                                <p class="ingredients-list">${recipe.ingredients.slice(0, 3).join(', ')}...</p>
+                            </div>
+                            <div class="recipe-actions">
+                                <button class="btn-favorite ${favoriteIds.includes(recipe.id) ? 'favorited' : ''}" 
+                                        data-id="${recipe.id}">
+                                    ${favoriteIds.includes(recipe.id) ? '❤️ Remove' : '🤍 Favorite'}
+                                </button>
+                                <button class="btn-view" data-id="${recipe.id}">📖 View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Add event listeners for recipe cards
+                this.bindRecipeEvents();
+            }
+
+            bindRecipeEvents() {
+                // Favorite buttons
+                document.querySelectorAll('.btn-favorite').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const recipeId = parseInt(btn.dataset.id);
+                        this.toggleFavorite(recipeId, btn);
+                    });
+                });
+
+                // View recipe buttons
+                document.querySelectorAll('.btn-view').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const recipeId = parseInt(btn.dataset.id);
+                        this.showRecipeDetails(recipeId);
+                    });
+                });
+
+                // Recipe card clicks
+                document.querySelectorAll('.recipe-card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        const recipeId = parseInt(card.dataset.id);
+                        this.showRecipeDetails(recipeId);
+                    });
+                });
+            }
+
+            toggleFavorite(recipeId, button) {
+                const favoriteIds = StorageManager.getFavorites();
+                
+                if (favoriteIds.includes(recipeId)) {
+                    StorageManager.removeFavorite(recipeId);
+                    button.textContent = '🤍 Favorite';
+                    button.classList.remove('favorited');
+                } else {
+                    StorageManager.addFavorite(recipeId);
+                    button.textContent = '❤️ Remove';
+                    button.classList.add('favorited');
+                }
+            }
+
+            showRecipeDetails(recipeId) {
+                const recipe = this.recipes.find(r => r.id === recipeId);
+                if (!recipe) return;
+
+                const modalBody = document.getElementById('modal-body');
+                const favoriteIds = StorageManager.getFavorites();
+                const isFavorite = favoriteIds.includes(recipeId);
+
+                modalBody.innerHTML = `
+                    <div class="recipe-detail">
+                        <div style="text-align: center; font-size: 4rem; margin-bottom: 1rem;">
+                            ${recipe.image}
+                        </div>
+                        <h2>${recipe.title}</h2>
+                        <div class="recipe-meta" style="justify-content: flex-start; gap: 2rem; margin: 1rem 0;">
+                            <span>⏱️ ${recipe.cookTime} minutes</span>
+                            <span>👥 ${recipe.servings} servings</span>
+                            <span>📊 ${recipe.difficulty}</span>
+                            <span>⭐ ${recipe.rating}/5</span>
+                        </div>
+                        
+                        <div style="margin: 2rem 0;">
+                            <h3 style="color: #ff6500; margin-bottom: 1rem;">Ingredients:</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                ${recipe.ingredients.map(ingredient => 
+                                    `<li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">✓ ${ingredient}</li>`
+                                ).join('')}
+                            </ul>
+                        </div>
+
+                        <div style="margin: 2rem 0;">
+                            <h3 style="color: #ff6500; margin-bottom: 1rem;">Instructions:</h3>
+                            <p style="line-height: 1.8; color: #666;">${recipe.instructions}</p>
+                        </div>
+
+                        <div style="margin: 2rem 0;">
+                            <h3 style="color: #ff6500; margin-bottom: 1rem;">Nutrition Info:</h3>
+                            <p><strong>Calories:</strong> ${recipe.calories} per serving</p>
+                            <p><strong>Cuisine:</strong> ${recipe.cuisine.charAt(0).toUpperCase() + recipe.cuisine.slice(1)}</p>
+                            ${recipe.diet ? `<p><strong>Diet:</strong> ${recipe.diet.charAt(0).toUpperCase() + recipe.diet.slice(1)}</p>` : ''}
+                        </div>
+
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <button class="btn-favorite ${isFavorite ? 'favorited' : ''}" 
+                                    data-id="${recipe.id}" id="modal-favorite-btn">
+                                ${isFavorite ? '❤️ Remove from Favorites' : '🤍 Add to Favorites'}
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                // Add event listener for modal favorite button
+                document.getElementById('modal-favorite-btn').addEventListener('click', (e) => {
+                    this.toggleFavorite(recipeId, e.target);
+                    // Update the main grid as well
+                    this.displayRecipes(this.filteredRecipes);
+                });
+
+                document.getElementById('recipe-modal').style.display = 'block';
+            }
+
+            closeModal() {
+                document.getElementById('recipe-modal').style.display = 'none';
+            }
+
+            showLoading() {
+                document.getElementById('recipe-grid').innerHTML = `
+                    <div class="loading">
+                        <h3>🔍 Searching recipes...</h3>
+                        <p>Please wait while we find the perfect recipes for you.</p>
+                    </div>
+                `;
+            }
+
+            showError(message) {
+                document.getElementById('recipe-grid').innerHTML = `
+                    <div class="error">
+                        <h3>⚠️ Oops!</h3>
+                        <p>${message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', () => {
+            new RecipeManager();
+        });
+
+        // Lazy loading simulation for images
+        const observeImages = () => {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.style.opacity = '1';
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('.recipe-image').forEach(img => {
+                imageObserver.observe(img);
+            });
+        };
+
+        // Call lazy loading when recipes are displayed
+        setTimeout(observeImages, 100);
+    </script>
+</body>
+</html>

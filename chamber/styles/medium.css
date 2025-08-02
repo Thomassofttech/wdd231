@@ -1,0 +1,11 @@
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-areas: 
+      "visit-msg visit-msg"
+      "gallery gallery";
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

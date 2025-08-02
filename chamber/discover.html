@@ -14,6 +14,11 @@
   <meta property="og:url" content="https//thomassofttech.github.io/wdd231/chamber/directory.html">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/medium.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/discover.js" defer></script>
+  <script src="scripts/visitmessage.js" defer></script>
   <script src="scripts/directory.js" defer></script>
  <script src="scripts/getdates.js" defer></script>
 </head>
@@ -27,25 +32,23 @@
     <nav id="navmenu" class="closed" class="open">
       <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
-         <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+         <li><a href="discover.html" class="active">Discover</a></li>
         <li><a href="join.html">Join</a> </li>
       </ul>
     </nav>
   </header>
   <main>
-    <h2 class="h2">Business Directory</h2>
-    <div class="view-buttons">
-      <button id="grid">Grid view</button>
-      <button id="list">List View</button>
-    </div>
-    <div id="directory" class="grid">
-      <!--Business member cards will be injeced here by js-->
-    </div>
+    <main class="discover-grid" >
+    <aside id="visit-msg" class="visitor-message"></aside>
+    <section id="gallery">
+
+    </section>
+    </main>   
   </main>
   <footer>
     <p>Contact us at info@abujachamber.com | (+234) 7082398763</p>
-    <p>&copy; 2025 <span id="currentyear"></span>Abuja Chamber of Commerce 🆖|Thomas Moses | WDD231</p>
+    <p>&copy;<span id="currentyear"></span> Abuja Chamber of Commerce 🆖|Thomas Moses | WDD231</p>
     <p><span id="lastModified"></span></p>
   </footer>
 </body>

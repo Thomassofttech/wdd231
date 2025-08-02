@@ -1,0 +1,24 @@
+[
+{
+    "title": "Acropolis Park",
+    "image": "images/acropolis.webp",
+    "address": "Apo District _Abuja",
+    "description": "Acropolis is a recreational destination located in the heart of Nigeria's capital city, and a re- enactment of the Greek architectural masterpiece.",
+    "website": "https://acropolispark.com/"
+},
+
+{
+    "title": "Zuma Rock",
+    "image": "images/zuma-rock.jpg",
+    "address": "Abuja - Nigeria",
+    "description": "Zuma Rock is a large natural monolith, or inselberg, an igneous intrusion composed of gabbro and granodiorite, located in Madalla, a town in Niger State, Nigeria",
+    "website": "https://en.wikipedia.org/wiki/Zuma_Rock"
+},
+ 
+{
+    "title": "Millenium Park",
+    "image": "images/millenium",
+    "address": "Central Area - Abuja",
+    "description": "The Millennium Park is the largest public park of Abuja, the capital of Nigeria and is located in the Maitama district of the city. ",
+}
+]
