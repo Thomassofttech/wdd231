@@ -12,13 +12,13 @@
     "image": "images/zuma-rock.jpg",
     "address": "Abuja - Nigeria",
     "description": "Zuma Rock is a large natural monolith, or inselberg, an igneous intrusion composed of gabbro and granodiorite, located in Madalla, a town in Niger State, Nigeria",
-    "website": "https://en.wikipedia.org/wiki/Zuma_Rock"
+    "website": "https://en.wikipedia.org/wiki/Zuma-Rock"
 },
  
 {
     "title": "Millenium Park",
-    "image": "images/millenium",
+    "image": "images/millenium.jpg",
     "address": "Central Area - Abuja",
-    "description": "The Millennium Park is the largest public park of Abuja, the capital of Nigeria and is located in the Maitama district of the city. ",
+    "description": "The Millennium Park is the largest public park of Abuja, the capital of Nigeria and is located in the Maitama district of the city. "
 }
 ]

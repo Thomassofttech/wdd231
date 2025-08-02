@@ -25,3 +25,62 @@
   transform: scale(1.05);
   transition: 0.3s ease;
 }
+
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-areas:
+    "img title"
+    "img address"
+    "img desc"
+    "img button";
+  grid-template-columns: 150px 1fr;
+  gap: 0.5rem 1rem;
+  align-items: center;
+}
+
+.card-img {
+  grid-area: img;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.card-title {
+  grid-area: title;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.card-address {
+  grid-area: address;
+  font-style: normal;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.card-desc {
+  grid-area: desc;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.card-btn {
+  grid-area: button;
+  background-color: #fdbb30;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+}

@@ -3,18 +3,23 @@ async function loadCards() {
   const items = await response.json();
 
   const gallery = document.querySelector("#gallery");
+
   items.forEach(item => {
     const card = document.createElement("div");
     card.classList.add("card");
 
     card.innerHTML = `
-      <h2>${item.title}</h2>
-      <figure>
-        <img src="${item.image}" alt="${item.title}" loading="lazy" />
-      </figure>
-      <address>${item.address}</address>
-      <p>${item.description}</p>
-      <button>Learn More</button>
+      <div class="card-grid">
+        <img src="${item.image}" alt="${item.title}" class="card-img" loading="lazy" />
+        <h2 class="card-title">${item.title}</h2>
+        <address class="card-address">${item.address}</address>
+        <p class="card-desc">${item.description}</p>
+        <button class="card-btn">
+        <a href="${item.website}">
+        Learn More
+        </a>
+        </button>
+      </div>
     `;
 
     gallery.appendChild(card);

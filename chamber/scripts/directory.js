@@ -56,9 +56,13 @@ menuButton.addEventListener("click", () => {
 
 // Set timestamp on load
 window.addEventListener("DOMContentLoaded", () => {
-  const timestamp = new Date().toISOString();
-  document.getElementById("timestamp").value = timestamp;
+  const timestampField = document.getElementById("timestamp");
+  if (timestampField) {
+    const timestamp = new Date().toISOString();
+    timestampField.value = timestamp;
+  }
 });
+
 
 // Modal control
 function openModal(id) {
