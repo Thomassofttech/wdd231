@@ -26,5 +26,66 @@
     "image": "images/millenium.jpg",
     "address": "Central Area - Abuja",
     "description": "The Millennium Park is the largest public park of Abuja, the capital of Nigeria and is located in the Maitama district of the city. "
-}
+},
+
+{
+    "title": "Jabi Lake",
+    "image": "images/jabi-lake.webp",
+    "address": "Jabi District, Abuja",
+    "description": "A serene lake for leisure activities like boat rides and picnics."
+  },
+  {
+    "title": "Magic Land Amusement Park",
+    "image": "images/magicland.webp",
+    "address": "Near City Gate, Abuja",
+    "description": "A fun park with exciting rides for families and kids."
+  },
+  {
+    "title": "Art and Craft Village",
+    "image": "images/art-village.webp",
+    "address": "Central Area, Abuja",
+    "description": "Shop for handmade crafts, art, and souvenirs from local artisans."
+  },
+  {
+    "title": "Jabi Lake Mall",
+    "image": "images/jabi-mall.webp",
+    "address": "Jabi District, Abuja",
+    "description": "A modern shopping center with restaurants, cinemas, and boutiques."
+  },
+  {
+    "title": "National Christian Centre",
+    "image": "images/christian-centre.webp",
+    "address": "Central Business District, Abuja",
+    "description": "One of the largest churches in Nigeria, known for its architecture."
+  },
+  {
+    "title": "IBB Golf Club",
+    "image": "images/ibb-golf.webp",
+    "address": "Asokoro District, Abuja",
+    "description": "A prestigious golf course and leisure club in a lush environment."
+  },
+  {
+    "title": "Eagle Square",
+    "image": "images/eagle-square.webp",
+    "address": "Central Area, Abuja",
+    "description": "Venue for national events, parades, and public gatherings."
+  },
+  {
+    "title": "Nike Art Gallery",
+    "image": "images/nike-gallery.webp",
+    "address": "Mabushi, Abuja",
+    "description": "A cultural art space showcasing Nigerian paintings, fabrics, and sculptures."
+  },
+  {
+    "title": "Thought Pyramid Art Centre",
+    "image": "images/thought-pyramid.webp",
+    "address": "Wuse II, Abuja",
+    "description": "An art gallery promoting contemporary African art."
+  },
+  {
+    "title": "BMT African Garden",
+    "image": "images/bmt-garden.webp",
+    "address": "Gudu District, Abuja",
+    "description": "A beautiful relaxation spot with African-themed designs and dining."
+  }
 ]

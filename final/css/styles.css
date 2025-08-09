@@ -1,0 +1,90 @@
+/* Simple normalize + styles (color scheme: --brand-blue, --accent) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #ffffff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Colors */
+:root{
+  --brand-blue: #0A369D;
+  --accent: #FFD447;
+  --muted: #f8f7f5;
+  --card-border: #e6e6e6;
+  --max-width: 1000px;
+}
+
+/* Layout */
+.container { width: 94%; max-width: var(--max-width); margin: 0 auto; }
+
+/* Header */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:0.6rem 1rem;
+  border-bottom:3px solid var(--brand-blue);
+  background:#fff;
+}
+.brand{ display:flex; align-items:center; gap:0.6rem; }
+.brand .logo{ width:44px; height:44px; object-fit:contain; }
+.brand h1{ color:var(--brand-blue); font-size:1.15rem; }
+.nav{ display:flex; gap:1rem; align-items:center; }
+.nav a{ color:var(--brand-blue); padding:0.35rem 0.6rem; border-radius:4px; }
+.nav a:hover{ background:var(--muted); }
+
+/* Mobile menu button (if you add script for it) */
+.menu-btn{ display:none; background:transparent; border:0; font-size:1.4rem; }
+
+/* Hero */
+.hero{ background:var(--muted); padding:2rem 0; }
+.hero-banner{ background:linear-gradient(180deg,#fff,#fdf2d6); padding:2rem; border-radius:8px; text-align:center; width:100%; max-width:900px; margin:0 auto; }
+.hero-banner h2{ color:var(--brand-blue); margin-bottom:0.5rem; }
+.btn{ display:inline-block; padding:0.5rem 0.9rem; background:var(--brand-blue); color:#fff; border-radius:6px; text-decoration:none; margin:0.3rem; }
+.btn.ghost{ background:transparent; color:var(--brand-blue); border:1px solid var(--brand-blue); }
+
+/* Feature list */
+.feature-list{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; padding:1.25rem 0; width:100%; max-width:var(--max-width); margin:0 auto; }
+.feature-list article{ background:#fff; border:1px solid var(--card-border); padding:1rem; border-radius:6px; }
+
+/* Controls */
+.controls{ display:flex; gap:0.75rem; align-items:center; padding:0.75rem 1rem; max-width:var(--max-width); margin:0.75rem auto; }
+.controls label{ font-weight:600; margin-right:0.25rem; }
+
+/* Grid of services */
+.grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:1rem; padding:1rem; max-width:var(--max-width); margin:0 auto; }
+.card{ border:1px solid var(--card-border); padding:0.6rem; background:#fff; border-radius:6px; display:flex; flex-direction:column; height:100%; }
+.card img{ width:100%; height:150px; object-fit:cover; border-radius:4px; }
+.card h4{ color:var(--brand-blue); margin:0.5rem 0; font-size:1.05rem; }
+.card p{ margin:0.25rem 0; font-size:0.95rem; }
+.card .actions{ margin-top:auto; display:flex; gap:0.5rem; }
+
+/* Footer */
+.site-footer{ border-top:1px solid #ddd; padding:1rem; text-align:center; margin-top:2rem; background:#fff; }
+
+/* Modal */
+.modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.45); z-index:1200; padding:1rem; }
+.modal[aria-hidden="false"]{ display:flex; }
+.modal-content{ width:100%; max-width:720px; background:#fff; border-radius:8px; padding:1rem; position:relative; }
+.modal-close{ position:absolute; top:8px; right:12px; border:0; font-size:1.4rem; background:transparent; cursor:pointer; }
+
+/* Form */
+.form{ width:94%; max-width:640px; margin:1rem auto; display:grid; gap:0.5rem; }
+.form label{ font-weight:600; }
+.form input[type="text"], .form input[type="email"], .form select, .form textarea{
+  padding:0.5rem; border-radius:6px; border:1px solid var(--card-border); width:100%;
+}
+.form button{ padding:0.6rem 0.9rem; border-radius:6px; border:0; background:var(--brand-blue); color:#fff; cursor:pointer; }
+
+/* Small screens */
+@media (max-width:800px){
+  .nav{ display:none; }
+  .menu-btn{ display:block; }
+  .hero-banner{ padding:1.25rem; }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neighbour Services</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <img src="images/favicon.ico" alt="Logo" class="logo">
+    <h1>Call Your Neighbour</h1>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="request.html">Post Request</a>
+  </nav>
+</header>
+
+<section class="controls">
+  <label for="filter-location">Filter by location:</label>
+  <select id="filter-location">
+    <option value="all">All</option>
+  </select>
+  <button id="clear-favs">Clear Saved</button>
+</section>
+
+<section id="services-grid" class="grid">
+  <!-- JS will render at least 15 items here -->
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Call Your Neighbour</p>
+</footer>
+
+<script type="module" src="scripts/main.js"></script>
+</body>
+</html>

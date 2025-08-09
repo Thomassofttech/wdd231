@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Service Request</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <img src="images/favicon.ico" alt="Logo" class="logo">
+    <h1>Call Your Neighbour</h1>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="request.html">Post Request</a>
+  </nav>
+</header>
+
+<form id="service-request-form" action="form-confirmation.html" method="GET" class="form">
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" required />
+
+  <label for="location">Location</label>
+  <input id="location" name="location" type="text" required />
+
+  <label for="service">Service needed</label>
+  <select id="service" name="service" required></select>
+
+  <label for="details">Details</label>
+  <textarea id="details" name="details" rows="4"></textarea>
+
+  <button type="submit">Submit Request</button>
+</form>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Call Your Neighbour</p>
+</footer>
+
+<script type="module" src="scripts/main.js"></script>
+</body>
+</html>

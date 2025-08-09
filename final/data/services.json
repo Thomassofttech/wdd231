@@ -1,0 +1,17 @@
+[
+  {"id":1,"title":"Light Bulb Replacement","provider":"John Doe","contact":"john@example.com","location":"Abuja","details":"Help with replacing light bulbs in homes.","image":"service-1.jpg"},
+  {"id":2,"title":"Grocery Pickup","provider":"Mary Smith","contact":"mary@example.com","location":"Abuja","details":"Pick up groceries and deliver to door.","image":"service-2.jpg"},
+  {"id":3,"title":"Yard Cleanup","provider":"Ibrahim Ali","contact":"ibrahim@example.com","location":"Lagos","details":"Mow lawn, remove weeds, and tidy yard.","image":"service-3.jpg"},
+  {"id":4,"title":"Dog Walking","provider":"Grace Nwosu","contact":"grace@example.com","location":"Abuja","details":"Daily short walks for your pet.","image":"service-4.jpg"},
+  {"id":5,"title":"Computer Troubleshooting","provider":"Adekunle","contact":"adekunle@example.com","location":"Port Harcourt","details":"Basic PC repairs and virus scans.","image":"service-5.jpg"},
+  {"id":6,"title":"Minor Plumbing","provider":"Chinedu","contact":"chinedu@example.com","location":"Lagos","details":"Unclogging sinks, fixing leaks, and simple plumbing.","image":"service-6.jpg"},
+  {"id":7,"title":"Tutoring — Math","provider":"Fatima Bello","contact":"fatima@example.com","location":"Abuja","details":"Primary and secondary school maths tutoring.","image":"service-7.jpg"},
+  {"id":8,"title":"Guitar Lessons","provider":"Paul Okoye","contact":"paul@example.com","location":"Enugu","details":"Beginner guitar lessons for all ages.","image":"service-8.jpg"},
+  {"id":9,"title":"House Cleaning","provider":"Rita Ade","contact":"rita@example.com","location":"Port Harcourt","details":"Regular or one-time house cleaning.","image":"service-9.jpg"},
+  {"id":10,"title":"Laundry Pickup","provider":"Sadiq","contact":"sadiq@example.com","location":"Abuja","details":"Pickup and return laundry service.","image":"service-10.jpg"},
+  {"id":11,"title":"Errand Runner","provider":"Ngozi","contact":"ngozi@example.com","location":"Lagos","details":"Run local errands like bank visits and small purchases.","image":"service-11.jpg"},
+  {"id":12,"title":"Handyman — Small Jobs","provider":"Peter","contact":"peter@example.com","location":"Enugu","details":"Hanging shelves, assembling furniture, minor fixes.","image":"service-12.jpg"},
+  {"id":13,"title":"Plant Care","provider":"Amina","contact":"amina@example.com","location":"Abuja","details":"Watering and care for indoor plants.","image":"service-13.jpg"},
+  {"id":14,"title":"Senior Companion","provider":"Helen","contact":"helen@example.com","location":"Lagos","details":"Visit or call seniors for companionship and help.","image":"service-14.jpg"},
+  {"id":15,"title":"Delivery Assistance","provider":"Samuel","contact":"samuel@example.com","location":"Port Harcourt","details":"Help receiving packages and small deliveries.","image":"service-15.jpg"}
+]
