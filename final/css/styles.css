@@ -88,3 +88,45 @@ body {
   .menu-btn{ display:block; }
   .hero-banner{ padding:1.25rem; }
 }
+
+/* Base nav styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+#hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #ddd;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  nav.show {
+    display: block;
+  }
+
+  #hamburger {
+    display: block;
+  }
+}
+

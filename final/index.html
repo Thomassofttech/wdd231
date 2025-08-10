@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Call Your Neighbour for Service</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="scripts/main.js" defer></script>
 </head>
 <body>
-<header class="site-header">
+<header class="site-header" >
   <div class="brand">
     <img src="images/logo.png" alt="Logo" class="logo">
     <h1>Call Your Neighbour</h1>
   </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
+  <button id="hamburger" arial-label="Toggle menu">
+    ☰
+  </button>
+  <nav class="nav" id="navmenu" >
+    <ul>
+    <li><a href="index.html">Home</a></li>
     <a href="services.html">Services</a>
     <a href="request.html">Post Request</a>
+    </ul>
   </nav>
 </header>
 
@@ -40,7 +46,17 @@
 </section>
 
 <footer class="site-footer">
-  <p>&copy; 2025 Call Your Neighbour</p>
-</footer>
+        <div>
+            <a href="https://github.com/Thomassofttech" target="_blank"><img src="images/github-logo.png" width="60" height="45" alt="github link"></a>
+            <a href="https://www.linkedin.com/in/thomas-moses-1014981a0
+
+" target="_blank"> <img src="images/linkedin-logo.png" width="55" height="45" alt="linkedin-link"></a>
+            <a href="https//www.facebook.com/thomas.moses.100/" target="_blank"><img src="images/facebook-logo.png" width="60" alt="facebook link"></a>
+            <a href="https//twitter.com/" target="_blank"><img src="images/x-logo.png" width="50" height="45" alt="x link"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> Thomas Moses | Abuja-Nigeria🟩</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getdate.js"></script>
 </body>
 </html>
